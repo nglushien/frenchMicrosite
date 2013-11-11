@@ -1,0 +1,50 @@
+.social{
+	background-color:#ffffff; 
+	border-top:6px double #b3b3b3; 
+	height:auto;
+	padding:10px 0;
+
+	p{
+		color: #666;
+		display: inline-block;
+		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 14px;
+		float: left;
+		margin:0 8px 0 0;
+	}
+
+	a{
+		float: left;
+		margin:0 5px 0 0;
+	}
+}
+
+.relatedArticles{
+	background-color:#ffffff; 
+	border-top:6px double #b3b3b3; 
+	height:350px; 
+	margin:20px 0 0;
+
+	p.sectionTitle{
+		color: #666;
+		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 14px;
+		line-height: 2;
+		margin: 0;
+	}
+}
+
+.bottom{
+	position: absolute;
+	bottom:0;
+}
+
+.topFixed{
+	position: fixed !important;
+	top:10px !important;
+}
+
+.topRelative{
+	position: relative;
+	top:0;
+}

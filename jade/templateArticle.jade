@@ -1,0 +1,18 @@
+extends layoutIndex
+
+block content
+	#micrositeContainer
+		include header
+		#micrositeContent
+			#micrositeContentColumnFull
+				.micrositeModuleContainer
+					.leaderboard
+						p Leaderboard 728 x 90
+				include navigation
+			#micrositeContentColumnLeft
+				include leftRail
+			#micrositeContentColumnRight
+				include rightRail
+			#micrositeContentColumnMiddle
+				include contentArticle
+		include footer

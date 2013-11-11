@@ -1,0 +1,75 @@
+@import "_config";
+
+h1.pageTitle{
+	color:#222;
+	display:inline-block;
+	font-family: $font-stack;
+	font-size: 22px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+.titleArea + hr{
+	margin:5px 0 12px !important;
+}
+
+h1.title{
+		color:#666;
+		font-size:32px;
+		font-weight:normal;
+		line-height:1.3em;
+	}
+
+.authorArea{
+	border-bottom:1px solid #b3b3b3;
+	border-top:1px solid #b3b3b3;
+	margin:10px 0 0;
+
+	p{
+		color:#666;
+		display: inline-block;
+		font-size:12px;
+		margin:0;
+		padding:6px 0;
+		span{
+			color:#b3b3b3;
+		}
+	}
+}
+
+.authorArea + p{
+	margin-top: 24px;
+}
+
+p{
+	color:#222;
+	font-family: $font-stack;
+	font-size: 13px;
+	font-weight:normal;
+	line-height:1.3em;
+	margin-bottom:30px;
+
+	&.sectionTitle{
+		margin-bottom: 0 !important;
+	}
+}
+
+hr + p{
+	margin-bottom:24px;
+}
+
+p + hr{
+	margin:24px 0 !important;	
+}
+
+h3.topic{
+	color:#ae1f23;
+	font-family: $font-stack;
+	font-size: 16px;
+	font-weight:bold;
+	line-height:1.5em;
+
+	a{
+		color:#ae1f23;
+	}
+}

@@ -1,0 +1,170 @@
+.carouselContainer {
+        p {
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        ul {
+            padding: 10px 0;
+            li {
+                padding: 0 0 5px 5px;
+                list-style-type: circle;
+                list-style-position: inside;
+            }
+        }
+        .group:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .hidden {
+            display: none;
+        }
+        .fleft {
+            float: left;
+        }
+        .fright {
+            float: right;
+        }
+        .menuSlider {
+            font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            border: 1px solid #aaa;
+            font-size: 11px;
+            background: #e2e2e2;
+            p {
+                margin: 0;
+            }
+            &.w175{ // 175px wide carousel. Subtract 2 to account for the border of .menuSlider. Button width is fixed at 32px.
+                width: 173px;
+                .previous, .next {
+                    width: 139px;
+                }
+                .previousButton, .nextButton {
+                    width: 32px;   
+                }
+            }
+            &.w300{
+                width: 298px;
+                .previous, .next {
+                    width: 264px;
+                }
+                .previousButton, .nextButton {
+                    width: 32px;   
+                }
+            }
+            &.w500{
+                width: 498px;
+                .previous, .next {
+                    width: 455px;
+                }
+                .previousButton, .nextButton {
+                    width: 32px;
+                }
+            }
+            &.w800{
+                width: 798px;
+                .previous, .next {
+                    width: 755px;
+                }
+                .previousButton, .nextButton {
+                    width: 32px;   
+                }
+            }
+            &.responsive{
+                width: 100%;
+                li:first-child {
+                    border-top: 1px solid #aaa;                
+                }
+                li:nth-of-type(4n+1) {
+                    border-top: 1px solid #aaa;                
+                }
+                .previousButton, .nextButton {
+                    width: 32px;   
+                }
+                .previous, .previousButton {
+                    border-bottom: 0;
+                }
+                .next, .nextButton {
+                    border-bottom: 0;
+                }
+                .bx-viewport {
+                    // border-bottom: 1px solid #aaa;
+                }
+                .bx-wrapper {
+                    margin: 25px 0 0 0;
+                }
+            }
+            &.resources {
+                .bxslider {
+                    li {
+                        color: #ae1f23;
+                        font-size: 14px;
+                        line-height: 17px;
+                        span {
+                            font-weight: bold;
+                            font-size: 9px;
+                            color: #666;
+                            text-transform: uppercase;
+                        }
+                        &:hover {
+                            span {
+                                color: #000;                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .previousButton, .previous {
+            border-bottom: 1px solid #aaa;
+        }
+        .previous, .next {
+            color: #b3b3b3;
+            border-right: 1px solid #aaa;
+            text-transform: uppercase;
+            float: right;
+            text-align: right;
+            padding-right: 10px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+        .previousButton, .nextButton {
+            text-align: center;
+            float: right;
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                color: #ae1f23;
+                font-family: verdana;
+                &.disabled {
+                    color: #b3b3b3;
+                }
+            }
+        }
+        .next, .nextButton, .previous, .previousButton {
+            background: #e2e2e2;
+            height: 25px;
+            line-height: 25px;
+            z-index: 100;
+        }
+        .bxslider li {
+            float: left;
+            height: 80px;
+            color: #666;
+            line-height: 14px;
+            padding: 0 10px;
+            border-bottom: 1px solid #aaa;
+            &:hover {
+                color: #000;
+                border-left: 4px solid #ae1f23;
+                padding: 0 10px 0 6px;
+            }
+        }
+        .bx-wrapper {
+            margin: 26px 0 0 0;
+        }
+        .bx-pager {
+            display: none;
+        }
+    }
