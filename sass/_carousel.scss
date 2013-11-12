@@ -33,6 +33,7 @@
             font-size: 11px;
             background: #e2e2e2;
             p {
+                line-height: 15px;
                 margin: 0;
             }
             &.w175{ // 175px wide carousel. Subtract 2 to account for the border of .menuSlider. Button width is fixed at 32px.

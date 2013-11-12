@@ -400,6 +400,7 @@ audio, canvas, video {
   background: #e2e2e2;
 }
 .carouselContainer .menuSlider p {
+  line-height: 15px;
   margin: 0;
 }
 .carouselContainer .menuSlider.w175 {
@@ -750,7 +751,7 @@ h1.title {
   color: #666;
   font-size: 32px;
   font-weight: normal;
-  line-height: 1.3em;
+  line-height: 40px;
 }
 
 .authorArea {
@@ -778,7 +779,7 @@ p {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 13px;
   font-weight: normal;
-  line-height: 1.3em;
+  line-height: 20px;
   margin-bottom: 30px;
 }
 p.sectionTitle {
@@ -918,6 +919,7 @@ h3.topic a {
   background: #e2e2e2;
 }
 .carouselContainer .menuSlider p {
+  line-height: 15px;
   margin: 0;
 }
 .carouselContainer .menuSlider.w175 {
