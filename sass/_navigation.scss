@@ -1,12 +1,13 @@
 @import "compass";
 
-#navigation{
+#micrositeHeaderNavigation{
 	background:#999;
 	border-radius:10px;
 	height:46px;
-	margin:25px 0 0;
+	margin:25px auto;
 	padding:0 20px;
 	@include background-image(linear-gradient(#c0c0c0, #999));
+	width:1120px;
 
 	ul{
 		float: left;

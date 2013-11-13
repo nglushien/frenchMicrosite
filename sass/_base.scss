@@ -9,10 +9,10 @@
 
 //Site Content Area
 #micrositeContent{margin:0 auto; overflow:auto; position: relative; width:1120px;}
-#micrositeContent #micrositeContentColumnFull{margin:0 0 25px;}
-#micrositeContent #micrositeContentColumnFull .leaderboard{background-color:#333; height:90px; margin:0 auto; padding:10px; position: relative; width:728px;}
-#micrositeContent #micrositeContentColumnFull .leaderboard p{color:white; left:50%; margin:-9px 0 0 -70px; padding:0; position:absolute; text-align:center; top:50%;}
+#micrositeContent #micrositeContentColumnFull{display:none;}
 #micrositeContent #micrositeContentColumnLeft{float: left; height:auto; width: 176px;}
 #micrositeContent #micrositeContentColumnRight{float: right; width:300px;}
-#micrositeContent #micrositeContentColumnMiddle{height:2000px; margin:0 330px 0 206px; min-width:580px;}
 #micrositeContent #micrositeContentColumnMain{margin:0 330px 0 0; min-width:580px;}
+.articleMain{
+	margin:0 330px 0 206px !important;
+}

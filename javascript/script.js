@@ -26,45 +26,13 @@ $(document).ready(function(){
 			$('#micrositeContentMainColumn').css('min-height', rightCol);
 		}
 
-	// If the page contains a main and right column, make .relatedResources persistant based on scroll position.
-
-		if($('#micrositeContentColumnLeft').length == 0){
-			$(window).scroll(function(){
-				var scrollPosition = $(window).scrollTop();
-				var headerHeight = $('#micrositeHeader').outerHeight(true);
-				var fullColumnHeight = $('#micrositeContentColumnFull').outerHeight(true);
-				var topSectionHeight = headerHeight + fullColumnHeight;
-				var adHeight = $('.messageUnit').outerHeight(true);
-				var middleBottom = $('#micrositeContentColumnMain').offset().top+$('#micrositeContentColumnMain').outerHeight(true);
-
-				if(scrollPosition >= topSectionHeight){
-					$('#micrositeContentColumnLeft').removeClass('topRelative').addClass('topFixed');		
-					
-					if(scrollPosition >= topSectionHeight + adHeight){
-						$('.relatedResources').removeClass('topRelative').addClass('topFixed');
-					} else {
-						$('.relatedResources').removeClass('topFixed').addClass('topRelative');
-					}
-
-					if(scrollPosition >= middleBottom - 420 && leftBottom >= middleBottom){
-						$('#micrositeContentColumnLeft').removeClass('topFixed').addClass('bottom');
-						$('.relatedResources').removeClass('topFixed topRelative').addClass('bottom');
-					} 
-					
-				} else if(scrollPosition >= topSectionHeight && $('.messageUnit').length == 0){
-
-					$('#micrositeContentColumnLeft').addClass('topFixed');
-					$('.relatedResources').addClass('topFixed');
-
-				} else {
-
-					$('#micrositeContentColumnLeft').removeClass('topFixed bottom');
-					$('.relatedResources').removeClass('topFixed bottom');
-					
-				}
-				
-			});
+	// If #micrositeContentColumnLeft is populated with content, add .articleMain to #micrositeContentColumnMiddle to set the margins appropriately
+		
+		var lC = $('#micrositeContentColumnLeft').children().length;
+		if(lC >= 1){
+			$('#micrositeContentColumnMain').addClass('articleMain');
 		}
+
 
 	// If the page contains a left, middle and right column, make #micrositeContentColumnLeft and .relatedResources persistant based on scroll position.
 
@@ -75,7 +43,7 @@ $(document).ready(function(){
 			var topSectionHeight = headerHeight + fullColumnHeight;
 			var adHeight = $('.messageUnit').outerHeight(true);
 			var leftBottom = $('#micrositeContentColumnLeft').offset().top+$('#micrositeContentColumnLeft').outerHeight(true);
-			var middleBottom = $('#micrositeContentColumnMiddle').offset().top+$('#micrositeContentColumnMiddle').outerHeight(true);
+			var mainBottom = $('#micrositeContentColumnMain').offset().top+$('#micrositeContentColumnMain').outerHeight(true);
 
 
 			if(scrollPosition >= topSectionHeight){
@@ -87,7 +55,7 @@ $(document).ready(function(){
 					$('.relatedResources').removeClass('topFixed').addClass('topRelative');
 				}
 
-				if(scrollPosition >= middleBottom - 420 && leftBottom >= middleBottom){
+				if(scrollPosition >= mainBottom - 420 && leftBottom >= mainBottom){
 					$('#micrositeContentColumnLeft').removeClass('topFixed').addClass('bottom');
 					$('.relatedResources').removeClass('topFixed topRelative').addClass('bottom');
 				} 
@@ -109,27 +77,27 @@ $(document).ready(function(){
 	// If the total width of all menu items is less than 50% of the total width of the menu bar, the menu
 	// will be left aligned. If the total width is greater than 50% then the menu items will be centered.
 
-		if($('#navigation ul').outerWidth(true) >= 560 ){
-			var totalWidth = $('#navigation').width();
-		    var totalListItems = $('#navigation li').length;
+		if($('#micrositeHeaderNavigation ul').outerWidth(true) >= 560 ){
+			var totalWidth = $('#micrositeHeaderNavigation').width();
+		    var totalListItems = $('#micrositeHeaderNavigation li').length;
 
 		    //Find the total width of the list items sans spacing
 		    var navigationListItemTotalWidth = 0;
-		    $('#navigation li').each(function(){
+		    $('#micrositeHeaderNavigation li').each(function(){
 		        navigationListItemTotalWidth += parseInt($(this).width());
 		    });
 
 		    var interiorPadding = ((totalWidth - navigationListItemTotalWidth)/(totalListItems))/2;
 
-		    $('#navigation li').css('margin-right', interiorPadding);
-		    $('#navigation li').css('margin-left', interiorPadding);
+		    $('#micrositeHeaderNavigation li').css('margin-right', interiorPadding);
+		    $('#micrositeHeaderNavigation li').css('margin-left', interiorPadding);
 		}
 
 	// Apply the .active class to the menu items on click
 
-		$('#navigation li a').on('click',function(){
-			if($('#navigation li a').hasClass('active')){
-				$('#navigation li a').removeClass();
+		$('#micrositeHeaderNavigation li a').on('click',function(){
+			if($('#micrositeHeaderNavigation li a').hasClass('active')){
+				$('#micrositeHeaderNavigation li a').removeClass();
 				$(this).addClass('active');
 			}
 		})
@@ -141,7 +109,7 @@ $(document).ready(function(){
 		    var url = window.location.pathname, 
 		        urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
 		        // now grab every link from the navigation
-		        $('#navigation li a').each(function(){
+		        $('#micrositeHeaderNavigation li a').each(function(){
 		            // and test its normalized href against the url pathname regexp
 		            if(urlRegExp.test(this.href.replace(/\/$/,''))){
 		                $(this).addClass('active');

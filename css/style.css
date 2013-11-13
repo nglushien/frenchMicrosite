@@ -215,26 +215,7 @@ audio, canvas, video {
 }
 
 #micrositeContent #micrositeContentColumnFull {
-  margin: 0 0 25px;
-}
-
-#micrositeContent #micrositeContentColumnFull .leaderboard {
-  background-color: #333;
-  height: 90px;
-  margin: 0 auto;
-  padding: 10px;
-  position: relative;
-  width: 728px;
-}
-
-#micrositeContent #micrositeContentColumnFull .leaderboard p {
-  color: white;
-  left: 50%;
-  margin: -9px 0 0 -70px;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  top: 50%;
+  display: none;
 }
 
 #micrositeContent #micrositeContentColumnLeft {
@@ -248,52 +229,68 @@ audio, canvas, video {
   width: 300px;
 }
 
-#micrositeContent #micrositeContentColumnMiddle {
-  height: 2000px;
-  margin: 0 330px 0 206px;
-  min-width: 580px;
-}
-
 #micrositeContent #micrositeContentColumnMain {
   margin: 0 330px 0 0;
   min-width: 580px;
 }
 
-#micrositeHeader {
+.articleMain {
+  margin: 0 330px 0 206px !important;
+}
+
+#micrositeHeader #micrositeHeaderBanner {
   background-color: #ffffff;
   border: 1px dashed slategray;
   height: 100px;
   margin: 0 0 25px;
 }
+#micrositeHeader .leaderboard {
+  background-color: #333;
+  height: 90px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 728px;
+}
+#micrositeHeader .leaderboard p {
+  color: white;
+  left: 50%;
+  margin: -9px 0 0 -70px;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}
 
-#navigation {
+#micrositeHeaderNavigation {
   background: #999;
   border-radius: 10px;
   height: 46px;
-  margin: 25px 0 0;
+  margin: 25px auto;
   padding: 0 20px;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c0c0c0), color-stop(100%, #999999));
   background-image: -webkit-linear-gradient(#c0c0c0, #999999);
   background-image: -moz-linear-gradient(#c0c0c0, #999999);
   background-image: -o-linear-gradient(#c0c0c0, #999999);
   background-image: linear-gradient(#c0c0c0, #999999);
+  width: 1120px;
 }
-#navigation ul {
+#micrositeHeaderNavigation ul {
   float: left;
   height: 100%;
   list-style-type: none;
   width: auto;
 }
-#navigation li {
+#micrositeHeaderNavigation li {
   display: block;
   float: left;
   margin: 0 10px;
   position: relative;
 }
-#navigation li:first-child {
+#micrositeHeaderNavigation li:first-child {
   margin: 0 20px 0 0;
 }
-#navigation li a {
+#micrositeHeaderNavigation li a {
   color: #fff;
   display: block;
   font-family: helvetica;
@@ -304,15 +301,15 @@ audio, canvas, video {
   margin: 0 auto;
   padding: 0 15px;
 }
-#navigation li a.active {
+#micrositeHeaderNavigation li a.active {
   background: #666;
   border-bottom: 4px solid #ae1f23;
   height: 46px;
 }
-#navigation li:hover {
+#micrositeHeaderNavigation li:hover {
   text-decoration: none;
 }
-#navigation .li-padding {
+#micrositeHeaderNavigation .li-padding {
   margin-left: 10px;
   margin-right: 10px;
 }
